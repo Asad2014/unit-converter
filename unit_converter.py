@@ -4,7 +4,7 @@ st.title("🌍Unit Converter App")
 st.markdown("### Converts Length, Weight And Time Instantly")
 st.write("Welcome! Select a category, enter a value and get the converted result in real-time")
 
-category = st.selectbox("Choose a categoty", ["Length", "Weight", "Time"])
+category = st.selectbox("Choose a category", ["Length", "Weight", "Time"])
 
 def convert_units(category, value, unit):
     if category == "Length":
@@ -34,16 +34,16 @@ def convert_units(category, value, unit):
     return 0
         
 if category == "Length":
-    unit = st.selectbox("📏 Select Conversation", ["Miles to Kilometers","Kilometers to Miles"])
+    unit = st.selectbox("📏 Select Conversion", ["Miles to Kilometers","Kilometers to Miles"])
 elif category == "Weight":
-    unit = st.selectbox("⚖️ Select Conversation", ["Kilograms to pounds", "Pounds to kilograms"])
+    unit = st.selectbox("⚖️ Select Conversion", ["Kilograms to pounds", "Pounds to kilograms"])
         
 elif category == "Time":
-    unit = st.selectbox("⏱️ Select Conversation", ["Seconds to minutes", "Minutes to seconds", "Minutes to hours", "Hours to minutes", "Hours to days", "Days to hours"])
+    unit = st.selectbox("⏱️ Select Conversion", ["Seconds to minutes", "Minutes to seconds", "Minutes to hours", "Hours to minutes", "Hours to days", "Days to hours"])
 
 value = st.number_input("Enter the value to convert")
 
 if st.button("Convert"):
     result = convert_units(category, value, unit)
     st.success(f"The result is {result:.2f}")
-    
+
